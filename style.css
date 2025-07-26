@@ -1,0 +1,172 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background-color: #a7bfa4;
+  color: #ccc;
+}
+
+.hero-section {
+  background-color: #3e2c1c;
+  padding: 60px 0;
+  color: #ccc;
+}
+
+.promo-banner {
+  background-color: #3e2c1c;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.btn-dark {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  font-weight: 600;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-inner {
+  border-radius: 10px;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 60px;
+}
+
+.product-card {
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 30px;
+  transition: transform 0.3s ease;
+  background-color: #f9f7f4;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.color-bar {
+  height: 60px;
+}
+
+.product-img {
+  width: 140px;
+  margin-top: -70px;
+}
+
+.product-title {
+  font-weight: 800;
+  font-size: 1.6rem;
+}
+
+.product-subtitle {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  color: #888;
+  margin-top: 10px;
+}
+
+.roast-line {
+  position: relative;
+  width: 100%;
+}
+
+.roast-marker {
+  position: absolute;
+  top: -12px;
+  transform: translateX(-50%);
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: #80bdff;
+}
+
+.input-group-text {
+  cursor: pointer;
+}
+
+form {
+  margin-right: 10px;
+}
+
+footer {
+  background-color: #3e2c1c;
+  color: #ccc;
+}
+
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer input:focus {
+  box-shadow: none;
+}
+
+.btn-coffee {
+  background-color: #a16d28 !important;
+  color: white !important;
+}
+
+.btn-coffee:hover {
+  background-color: #2d1f14 !important;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.beans-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.beans-section .banner-content {
+  background-color: #3e2c1c;
+  border-radius: 10px;
+  color: #ccc;
+  text-align: center;
+}
+
+.beans-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("images/beans/beans_2.jpg") center/cover no-repeat;
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.beans-section .container {
+  position: relative;
+  z-index: 1;
+  color: #3e2c1c;
+}
