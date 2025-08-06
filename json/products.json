@@ -1,0 +1,84 @@
+[
+    {
+      "id": 1,
+      "title": "Simple Summer",
+      "price": 42000,
+      "description": "orange zest, nougat, guava",
+      "image": "images/beans/simple_summer.png",
+      "roast": 80,
+      "quantity": 0
+    },
+    {
+      "id": 2,
+      "title": "Mellow Gold",
+      "price": 34650,
+      "description": "caramel, hazelnut, date",
+      "image": "images/beans/mellow_gold.png",
+      "roast": 50,
+      "quantity": 0
+    },
+    {
+      "id": 3,
+      "title": "Black Velvet",
+      "price": 41370,
+      "description": "dark chocolate, brown sugar",
+      "image": "images/beans/black_velvet.png",
+      "roast": 70,
+      "quantity": 0
+    },
+    {
+      "id": 4,
+      "title": "Java Blend",
+      "price": 34650,
+      "description": "toffee, caramel, citrus",
+      "image": "images/beans/java_blend.png",
+      "roast": 70,
+      "quantity": 0
+    },
+    {
+      "id": 5,
+      "title": "Mocha Roast",
+      "price": 34650,
+      "description": "chocolate, nutty",
+      "image": "images/beans/mocha_roast.png",
+      "roast": 70,
+      "quantity": 0
+    },
+    {
+      "id": 6,
+      "title": "Single Origin",
+      "price": 36750,
+      "description": "100% original",
+      "image": "images/beans/single_origin.png",
+      "roast": 70,
+      "quantity": 0
+    },
+    {
+      "id": 7,
+      "title": "Moonwalk",
+      "price": 34650,
+      "description": "milk chocolate, hazelnut, bergomel",
+      "image": "images/beans/moonwalk.png",
+      "roast": 70,
+      "quantity": 0
+    },
+    {
+      "id": 8,
+      "title": "Cosmo",
+      "price": 34650,
+      "description": "plum, cranberry, marzipan",
+      "image": "images/beans/cosmo.png",
+      "roast": 70,
+      "quantity": 0
+    },
+    {
+      "id": 9,
+      "title": "Novo",
+      "price": 35700,
+      "description": "black cherry, walnut, molasses",
+      "image": "images/beans/novo.png",
+      "roast": 70,
+      "quantity": 0
+    }
+  ]
+  
