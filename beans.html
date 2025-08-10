@@ -16,7 +16,6 @@
   </head>
 
   <body>
-
     <div id="navbar-section"></div>
 
     <div id="cart-sidebar-section"></div>
@@ -34,6 +33,30 @@
       </div>
     </section>
 
+    <!-- Search Bar -->
+    <div class="container my-4">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <form class="d-flex" role="search" onsubmit="return false;">
+            <div class="input-group">
+              <input
+                id="searchInput"
+                class="form-control rounded-start-pill border-end-0 shadow-sm"
+                type="search"
+                placeholder="Search coffee bean"
+                aria-label="Search"
+              />
+              <span
+                class="input-group-text bg-white border-start-0 rounded-end-pill shadow-sm"
+              >
+                <i class="bi bi-search"></i>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <!-- Products Section -->
     <section class="py-5">
       <div class="container">
@@ -48,7 +71,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="cart.js"></script>
-    <script src="products.js"></script>
-    
+    <script src="beans.js"></script>
   </body>
 </html>

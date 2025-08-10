@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bean Boutique Coffee</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div id="navbar-section"></div>
+
+    <div id="cart-sidebar-section"></div>
+
+    <section class="hero-section px-4 px-md-5 py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+          <img
+            src="images/events/event_class.png"
+            alt="Roastery Class"
+            class="img-fluid w-75"
+            style="max-height: 400px; object-fit: contain"
+          />
+        </div>
+
+        <div class="col-lg-6 text-left">
+          <p class="mb-1"><strong>Coffee Subscription</strong></p>
+          <h1 class="fw-bold display-5">Subscribe & Save More!</h1>
+          <p class="mt-3">✓ A steady supply - never run out of coffee!</p>
+          <p>✓ Save up - get more value for your money.</p>
+          <p>✓ At your doorstep - delivered at your convenience.</p>
+          <p>✓ Experiment between coffees - or stick to your favourites.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Offers -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4">Our Special Offers</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="images/beans/bean_bag_1.png"
+              class="card-img-top"
+              alt="Seasonal Offer"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Special Edition Blend</h4>
+              <p class="card-text">
+                Enjoy our limited-edition seasonal coffee blend at a special
+                discounted price. Perfect for gifts or a cozy treat for
+                yourself. Find out and buy now!
+              </p>
+              <a href="beans.html" class="btn btn-coffee w-100">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="images/coffee.png"
+              class="card-img-top"
+              alt="Bundle Offer"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Subscribe & Save up to 10%</h4>
+              <p class="card-text">
+                Enjoy your favorite coffee for less! Subscribe and save up to
+                10% with fresh beans delivered straight to your door — always on
+                time, always fresh.
+              </p>
+              <a href="beans.html" class="btn btn-coffee w-100">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="images/coffee_2.png"
+              class="card-img-top"
+              alt="Free Shipping"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Free Next Day Delivery</h4>
+              <p class="card-text">
+                Free Next Day Delivery on Orders Over 250,000 MMK! Get the offer
+                and get your order delivered fast — free of charge, by the next
+                day!
+              </p>
+              <a href="beans.html" class="btn btn-coffee w-100">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subscription Section -->
+    <section class="py-5 text-center" style="background-color: #f9f4ef">
+      <div class="container">
+        <h2 class="mb-4">Subscribe to Our Plans</h2>
+        <p class="mb-5">
+          Choose a subscription plan and get freshly roasted coffee delivered to
+          your door every month.
+        </p>
+        <div class="row g-4">
+          <!-- Weekly Subscription -->
+          <div class="col-md-6">
+            <div class="text-start product-card shadow-sm px-4 pt-2">
+              <p class="product-title text-center">Weekly Subscription</p>
+              <p class="text-center">
+                Perfect for coffee lovers who can’t go a day without fresh
+                brews.
+              </p>
+              <span>Benefits:</span>
+              <ul>
+                <li>
+                  <span class="fw-bold">Fresh Beans Every Week</span> – Always
+                  enjoy beans at peak flavor.
+                </li>
+                <li>
+                  <span class="fw-bold">10% Discount</span> on all weekly
+                  deliveries.
+                </li>
+                <li>
+                  <span class="fw-bold">Exclusive Roasts</span> – Access to
+                  small-batch, limited-edition beans.
+                </li>
+                <li>
+                  <span class="fw-bold">Free Brewing Guide</span> with your
+                  first order.
+                </li>
+                <li>
+                  <span class="fw-bold">Priority Support</span> – Get faster
+                  assistance for orders & brewing advice.
+                </li>
+                <li>
+                  <span class="fw-bold">Flexible</span> pause or skip any week.
+                </li>
+              </ul>
+              <button id="weeklySub" class="btn btn-coffee w-100">
+                Subscribe Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Monthly Subscription -->
+          <div class="col-md-6">
+            <div class="text-start product-card shadow-sm px-4 pt-2">
+              <p class="product-title text-center">Monthly Subscription</p>
+              <p class="text-center">
+                Ideal for casual drinkers who want quality coffee without
+                constant restocking.
+              </p>
+              <span>Benefits:</span>
+              <ul>
+                <li>
+                  <span class="fw-bold">Fresh Beans Every Month</span> – Always
+                  Shipped right after roasting.
+                </li>
+                <li>
+                  <span class="fw-bold">5% Discount</span> on all monthly
+                  deliveries. deliveries.
+                </li>
+                <li>
+                  <span class="fw-bold">Surprise Sample</span> – A small bag of
+                  a featured seasonal roast.
+                </li>
+                <li>
+                  <span class="fw-bold">Member-Only Brewing Tips</span> Monthly
+                  coffee newsletter.
+                </li>
+                <li>
+                  <span class="fw-bold"
+                    >Change roast or grind type anytime</span
+                  >
+                  – before next shipment.
+                </li>
+                <li>
+                  <span class="fw-bold">Flexible</span> pause or skip any month.
+                </li>
+              </ul>
+              <button id="monthlySub" class="btn btn-coffee w-100">
+                Subscribe Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-section"></div>
+
+    <script>
+      fetch("components/navbar.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("navbar-section").innerHTML = data;
+
+          fetch("components/cart_sidebar.html")
+            .then((res) => res.text())
+            .then((data) => {
+              document.getElementById("cart-sidebar-section").innerHTML = data;
+              initializeCart();
+              loadCartItems();
+            });
+        });
+
+      fetch("components/footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer-section").innerHTML = data;
+
+          const form = document.getElementById("newsletterForm");
+          const emailInput = form.querySelector("input[type='email']");
+
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const email = emailInput.value.trim();
+
+            if (!email) {
+              Swal.fire({
+                icon: "warning",
+                title: "Email Required",
+                text: "Please enter your email to join the newsletter.",
+                confirmButtonColor: "#8B4513",
+              });
+              return;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+              Swal.fire({
+                icon: "error",
+                title: "Invalid Email",
+                text: "Please enter a valid email address.",
+                confirmButtonColor: "#8B4513",
+              });
+              return;
+            }
+
+            Swal.fire({
+              icon: "success",
+              title: "Thank You!",
+              text: "Our squirrel driven automation machines are shipping you a welcome email that should hit your inbox today.",
+              confirmButtonColor: "#8B4513",
+            });
+
+            emailInput.value = "";
+          });
+        });
+
+      document
+        .getElementById("weeklySub")
+        .addEventListener("click", function () {
+          Swal.fire({
+            icon: "success",
+            title: "Thank You!",
+            text: "You have subscribed our the weekly subscription plan.",
+            confirmButtonColor: "#a16d28",
+          });
+        });
+
+      document
+        .getElementById("monthlySub")
+        .addEventListener("click", function () {
+          Swal.fire({
+            icon: "success",
+            title: "Thank You!",
+            text: "You have subscribed our the monthly subscription plan.",
+            confirmButtonColor: "#a16d28",
+          });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>

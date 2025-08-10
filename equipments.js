@@ -48,6 +48,45 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((res) => res.text())
     .then((data) => {
       document.getElementById("footer-section").innerHTML = data;
+
+      const form = document.getElementById("newsletterForm");
+      const emailInput = form.querySelector("input[type='email']");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = emailInput.value.trim();
+
+        if (!email) {
+          Swal.fire({
+            icon: "warning",
+            title: "Email Required",
+            text: "Please enter your email to join the newsletter.",
+            confirmButtonColor: "#8B4513",
+          });
+          return;
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          Swal.fire({
+            icon: "error",
+            title: "Invalid Email",
+            text: "Please enter a valid email address.",
+            confirmButtonColor: "#8B4513",
+          });
+          return;
+        }
+
+        Swal.fire({
+          icon: "success",
+          title: "Thank You!",
+          text: "Our squirrel driven automation machines are shipping you a welcome email that should hit your inbox today.",
+          confirmButtonColor: "#8B4513",
+        });
+
+        emailInput.value = "";
+      });
     });
 
   fetch("components/cart_sidebar.html")

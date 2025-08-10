@@ -19,13 +19,22 @@ body {
   color: #ccc;
 }
 
+.bg-coffee {
+  background-color: #3e2c1c;
+}
+
 .btn-dark {
   font-weight: bold;
   letter-spacing: 1px;
 }
 
-.nav-link {
-  font-weight: 600;
+/* Navbar */
+.navbar-nav .nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: #b5651d;
 }
 
 .icon-text {
@@ -159,7 +168,7 @@ footer input:focus {
 }
 
 .card-img-top {
-  height: 200px;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -303,6 +312,13 @@ footer input:focus {
   overflow-y: auto;
 }
 
+@media (max-width: 768px) {
+  .cart-sidebar {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
 .cart-sidebar.open {
   right: 0;
 }
@@ -373,4 +389,25 @@ footer input:focus {
 .cart-subtotal {
   border-top: 1px solid #ddd;
   padding-top: 1rem;
+}
+
+/* registration page */
+.parsley-errors-list {
+  color: red;
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+.hero-bg {
+  background: url('images/beans.jpg') center/cover no-repeat;
+  padding: 40px 0;
+  color: white;
+  text-align: center;
+}
+.form-card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }

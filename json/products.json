@@ -1,84 +1,110 @@
 [
-    {
-      "id": 1,
-      "title": "Simple Summer",
-      "price": 42000,
-      "description": "orange zest, nougat, guava",
-      "image": "images/beans/simple_summer.png",
-      "roast": 80,
-      "quantity": 0
-    },
-    {
-      "id": 2,
-      "title": "Mellow Gold",
-      "price": 34650,
-      "description": "caramel, hazelnut, date",
-      "image": "images/beans/mellow_gold.png",
-      "roast": 50,
-      "quantity": 0
-    },
-    {
-      "id": 3,
-      "title": "Black Velvet",
-      "price": 41370,
-      "description": "dark chocolate, brown sugar",
-      "image": "images/beans/black_velvet.png",
-      "roast": 70,
-      "quantity": 0
-    },
-    {
-      "id": 4,
-      "title": "Java Blend",
-      "price": 34650,
-      "description": "toffee, caramel, citrus",
-      "image": "images/beans/java_blend.png",
-      "roast": 70,
-      "quantity": 0
-    },
-    {
-      "id": 5,
-      "title": "Mocha Roast",
-      "price": 34650,
-      "description": "chocolate, nutty",
-      "image": "images/beans/mocha_roast.png",
-      "roast": 70,
-      "quantity": 0
-    },
-    {
-      "id": 6,
-      "title": "Single Origin",
-      "price": 36750,
-      "description": "100% original",
-      "image": "images/beans/single_origin.png",
-      "roast": 70,
-      "quantity": 0
-    },
-    {
-      "id": 7,
-      "title": "Moonwalk",
-      "price": 34650,
-      "description": "milk chocolate, hazelnut, bergomel",
-      "image": "images/beans/moonwalk.png",
-      "roast": 70,
-      "quantity": 0
-    },
-    {
-      "id": 8,
-      "title": "Cosmo",
-      "price": 34650,
-      "description": "plum, cranberry, marzipan",
-      "image": "images/beans/cosmo.png",
-      "roast": 70,
-      "quantity": 0
-    },
-    {
-      "id": 9,
-      "title": "Novo",
-      "price": 35700,
-      "description": "black cherry, walnut, molasses",
-      "image": "images/beans/novo.png",
-      "roast": 70,
-      "quantity": 0
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Simple Summer",
+    "price": 42000,
+    "note": "orange zest, nougat, guava",
+    "description": "A bright and refreshing seasonal blend with vibrant fruit notes and a smooth finish.",
+    "image": "images/beans/simple_summer.png",
+    "roast": 80,
+    "quantity": 0,
+    "tastingNotes": ["Orange Zest", "Nougat", "Guava"],
+    "brewingMethods": ["Pour Over", "French Press", "Cold Brew"]
+  },
+  {
+    "id": 2,
+    "title": "Mellow Gold",
+    "price": 34650,
+    "note": "caramel, hazelnut, date",
+    "description": "A mellow, nutty coffee with a comforting sweetness and gentle body.",
+    "image": "images/beans/mellow_gold.png",
+    "roast": 50,
+    "quantity": 0,
+    "tastingNotes": ["Caramel", "Hazelnut", "Date"],
+    "brewingMethods": ["Drip Machine", "Pour Over", "Espresso"]
+  },
+  {
+    "id": 3,
+    "title": "Black Velvet",
+    "price": 41370,
+    "note": "dark chocolate, brown sugar",
+    "description": "A bold and silky roast with a deep chocolatey richness and lingering sweetness.",
+    "image": "images/beans/black_velvet.png",
+    "roast": 70,
+    "quantity": 0,
+    "tastingNotes": ["Dark Chocolate", "Brown Sugar"],
+    "brewingMethods": ["Espresso", "French Press", "Moka Pot"]
+  },
+  {
+    "id": 4,
+    "title": "Java Blend",
+    "price": 34650,
+    "note": "toffee, caramel, citrus",
+    "description": "A classic coffee blend balancing sweetness and citrus brightness.",
+    "image": "images/beans/java_blend.png",
+    "roast": 70,
+    "quantity": 0,
+    "tastingNotes": ["Toffee", "Caramel", "Citrus"],
+    "brewingMethods": ["Pour Over", "Drip Machine", "Cold Brew"]
+  },
+  {
+    "id": 5,
+    "title": "Mocha Roast",
+    "price": 34650,
+    "note": "chocolate, nutty",
+    "description": "A rich, full-bodied roast with warm chocolatey tones and nutty depth.",
+    "image": "images/beans/mocha_roast.png",
+    "roast": 70,
+    "quantity": 0,
+    "tastingNotes": ["Chocolate", "Nutty"],
+    "brewingMethods": ["Espresso", "French Press", "Moka Pot"]
+  },
+  {
+    "id": 6,
+    "title": "Single Origin",
+    "price": 36750,
+    "note": "100% original",
+    "description": "A pure, traceable coffee showcasing the unique flavors of its origin.",
+    "image": "images/beans/single_origin.png",
+    "roast": 70,
+    "quantity": 0,
+    "tastingNotes": ["Bright Acidity", "Clean Finish", "Floral"],
+    "brewingMethods": ["Pour Over", "Chemex", "Aeropress"]
+  },
+  {
+    "id": 7,
+    "title": "Moonwalk",
+    "price": 34650,
+    "note": "milk chocolate, hazelnut, bergomel",
+    "description": "A balanced medium roast with a playful blend of sweetness and nutty comfort.",
+    "image": "images/beans/moonwalk.png",
+    "roast": 70,
+    "quantity": 0,
+    "tastingNotes": ["Bright Acidity", "Clean Finish", "Floral"],
+    "brewingMethods": ["Pour Over", "Chemex", "Aeropress"]
+  },
+  {
+    "id": 8,
+    "title": "Cosmo",
+    "price": 34650,
+    "note": "plum, cranberry, marzipan",
+    "description": "A vibrant, fruity coffee with a sweet marzipan finish.",
+    "image": "images/beans/cosmo.png",
+    "roast": 70,
+    "quantity": 0,
+    "tastingNotes": ["Plum", "Cranberry", "Marzipan"],
+    "brewingMethods": ["Pour Over", "Cold Brew", "Chemex"]
+  },
+  {
+    "id": 9,
+    "title": "Novo",
+    "price": 35700,
+    "note": "black cherry, walnut, molasses",
+    "description": "A deep, syrupy roast with nutty undertones and rich fruit sweetness.",
+    "image": "images/beans/novo.png",
+    "roast": 70,
+    "quantity": 0,
+    "tastingNotes": ["Black Cherry", "Walnut", "Molasses"],
+    "brewingMethods": ["Espresso", "French Press", "Moka Pot"]
+  }
+]

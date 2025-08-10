@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bean Boutique Coffee</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div id="navbar-section"></div>
+
+    <section class="hero-bg">
+      <div class="container py-5 bg-coffee">
+        <h1 class="fw-bold">Register for Our Coffee Events</h1>
+        <h4>Join our upcoming workshops, tasting sessions, and more!</h4>
+      </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="form-card">
+              <form id="eventRegistration" data-parsley-validate>
+                <div class="mb-3">
+                  <label class="form-label">First Name</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    class="form-control"
+                    required
+                    data-parsley-required-message="Please enter your first name"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Last Name</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    class="form-control"
+                    required
+                    data-parsley-required-message="Please enter your last name"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    required
+                    data-parsley-type="email"
+                    data-parsley-required-message="Please enter your email"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Event</label>
+                  <select id="event" class="form-select" required>
+                    <option value="">Select an event</option>
+                    <option value="Coffee Tasting">Coffee Tasting</option>
+                    <option value="Brewing Class">Brewing Class</option>
+                    <option value="Meet the Roaster">Meet the Roaster</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn btn-coffee w-100">
+                  Register
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-section"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery (required for Parsley.js) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Parsley.js -->
+    <script src="https://cdn.jsdelivr.net/npm/parsleyjs"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+      fetch("components/navbar.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("navbar-section").innerHTML = data;
+        });
+
+      fetch("components/footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer-section").innerHTML = data;
+        });
+
+      $(function () {
+        $("#eventRegistration").on("submit", function (e) {
+          e.preventDefault();
+
+          let firstName = document.getElementById("firstName").value;
+          let lastName = document.getElementById("lastName").value;
+          let email = document.getElementById("email").value;
+          let event = document.getElementById("event").value;
+
+          let subject = encodeURIComponent("Event Registration");
+          let body = encodeURIComponent(
+            `${firstName} ${lastName} would like to register ${event} event.`
+          );
+
+          window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+        });
+      });
+    </script>
+  </body>
+</html>
