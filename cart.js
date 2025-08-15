@@ -52,7 +52,6 @@ function loadCartItems() {
             <strong>${item.title}</strong>
             <span>${item.price.toLocaleString()} MMK</span>
           </div>
-          <p class="text-muted mb-1">${item.size || "227 g"}</p>
           <div class="d-flex align-items-center gap-4">
             <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity(${
               item.id

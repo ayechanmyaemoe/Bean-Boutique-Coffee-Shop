@@ -23,11 +23,6 @@ body {
   background-color: #3e2c1c;
 }
 
-.btn-dark {
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
 /* Navbar */
 .navbar-nav .nav-link {
   position: relative;
@@ -89,14 +84,9 @@ body {
   height: 60px;
 }
 
-.title-bar {
-  height: 60px;
-  background-color: #3e2c1c;
-  color: #ccc;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.color-bar {
+  height: 20px;
+  background-color: #a16d28;
 }
 
 .product-img {
@@ -119,12 +109,25 @@ body {
 .roast-line {
   position: relative;
   width: 100%;
+  height: 2px;
 }
 
 .roast-marker {
   position: absolute;
   top: -12px;
   transform: translateX(-50%);
+}
+
+.light {
+  left: 30%;
+}
+
+.middle {
+  left: 50%;
+}
+
+.dark {
+  left: 70%;
 }
 
 .form-control:focus {
@@ -254,6 +257,31 @@ footer input:focus {
     right: 90px;
   }
 }
+
+.equipment-div {
+  height: 350px;
+}
+
+.equipment {
+  width: 150px;
+}
+
+.espresso-machine {
+  z-index: 1;
+}
+
+.coffee-grinder {
+  top: 60px;
+  left: 80px;
+  z-index: 2;
+}
+
+.french-press {
+  top: 120px;
+  left: 160px;
+  z-index: 3;
+}
+
 
 .equipment-title {
   font-size: 2.5rem;
@@ -410,4 +438,13 @@ footer input:focus {
   border-radius: 10px;
   padding: 30px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.event-image {
+  max-height: 400px; 
+  object-fit: contain
+}
+
+.subscribe-section {
+  background-color: #eeedeb;
 }

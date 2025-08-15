@@ -23,6 +23,127 @@ function updateCartCount() {
   document.getElementById("cart-count").textContent = distinctCount;
 }
 
+function getAllProducts() {
+  return [
+    {
+      id: 1,
+      title: "Simple Summer",
+      price: 42000,
+      note: "orange zest, nougat, guava",
+      description:
+        "A bright and refreshing seasonal blend with vibrant fruit notes and a smooth finish.",
+      image: "images/beans/simple_summer.png",
+      roast: 30,
+      quantity: 0,
+      tastingNotes: ["Orange Zest", "Nougat", "Guava"],
+      brewingMethods: ["Pour Over", "French Press", "Cold Brew"],
+    },
+    {
+      id: 2,
+      title: "Mellow Gold",
+      price: 34650,
+      note: "caramel, hazelnut, date",
+      description:
+        "A mellow, nutty coffee with a comforting sweetness and gentle body.",
+      image: "images/beans/mellow_gold.png",
+      roast: 50,
+      quantity: 0,
+      tastingNotes: ["Caramel", "Hazelnut", "Date"],
+      brewingMethods: ["Drip Machine", "Pour Over", "Espresso"],
+    },
+    {
+      id: 3,
+      title: "Black Velvet",
+      price: 41370,
+      note: "dark chocolate, brown sugar",
+      description:
+        "A bold and silky roast with a deep chocolatey richness and lingering sweetness.",
+      image: "images/beans/black_velvet.png",
+      roast: 85,
+      quantity: 0,
+      tastingNotes: ["Dark Chocolate", "Brown Sugar"],
+      brewingMethods: ["Espresso", "French Press", "Moka Pot"],
+    },
+    {
+      id: 4,
+      title: "Java Blend",
+      price: 34650,
+      note: "toffee, caramel, citrus",
+      description:
+        "A classic coffee blend balancing sweetness and citrus brightness.",
+      image: "images/beans/java_blend.png",
+      roast: 55,
+      quantity: 0,
+      tastingNotes: ["Toffee", "Caramel", "Citrus"],
+      brewingMethods: ["Pour Over", "Drip Machine", "Cold Brew"],
+    },
+    {
+      id: 5,
+      title: "Mocha Roast",
+      price: 34650,
+      note: "chocolate, nutty",
+      description:
+        "A rich, full-bodied roast with warm chocolatey tones and nutty depth.",
+      image: "images/beans/mocha_roast.png",
+      roast: 65,
+      quantity: 0,
+      tastingNotes: ["Chocolate", "Nutty"],
+      brewingMethods: ["Espresso", "French Press", "Moka Pot"],
+    },
+    {
+      id: 6,
+      title: "Single Origin",
+      price: 36750,
+      note: "100% original",
+      description:
+        "A pure, traceable coffee showcasing the unique flavors of its origin.",
+      image: "images/beans/single_origin.png",
+      roast: 40,
+      quantity: 0,
+      tastingNotes: ["Bright Acidity", "Clean Finish", "Floral"],
+      brewingMethods: ["Pour Over", "Chemex", "Aeropress"],
+    },
+    {
+      id: 7,
+      title: "Moonwalk",
+      price: 34650,
+      note: "milk chocolate, hazelnut, bergomel",
+      description:
+        "A balanced medium roast with a playful blend of sweetness and nutty comfort.",
+      image: "images/beans/moonwalk.png",
+      roast: 55,
+      quantity: 0,
+      tastingNotes: ["Bright Acidity", "Clean Finish", "Floral"],
+      brewingMethods: ["Pour Over", "Chemex", "Aeropress"],
+    },
+    {
+      id: 8,
+      title: "Cosmo",
+      price: 34650,
+      note: "plum, cranberry, marzipan",
+      description: "A vibrant, fruity coffee with a sweet marzipan finish.",
+      image: "images/beans/cosmo.png",
+      roast: 35,
+      quantity: 0,
+      tastingNotes: ["Plum", "Cranberry", "Marzipan"],
+      brewingMethods: ["Pour Over", "Cold Brew", "Chemex"],
+    },
+    {
+      id: 9,
+      title: "Novo",
+      price: 35700,
+      note: "black cherry, walnut, molasses",
+      description:
+        "A deep, syrupy roast with nutty undertones and rich fruit sweetness.",
+      image: "images/beans/novo.png",
+      roast: 80,
+      quantity: 0,
+      tastingNotes: ["Black Cherry", "Walnut", "Molasses"],
+      brewingMethods: ["Espresso", "French Press", "Moka Pot"],
+    },
+  ];
+}
+
 function renderProducts(list) {
   const container = document.getElementById("productListWrapper");
   container.innerHTML = "";
@@ -48,8 +169,8 @@ function renderProducts(list) {
               <span>Dark</span>
             </div>
             <div class="position-relative px-4">
-              <div class="roast-line bg-dark mt-1 mb-2" style="height: 2px"></div>
-              <div class="roast-marker" style="left: ${item.roast}%">
+              <div class="roast-line bg-dark mt-1 mb-2"></div>
+              <div class="roast-marker" data-roast="${item.roast}">
                 <span>☕</span>
               </div>
             </div>
@@ -59,6 +180,11 @@ function renderProducts(list) {
       </div>
     `;
     container.innerHTML += productHTML;
+  });
+
+  document.querySelectorAll(".roast-marker").forEach(marker => {
+    const roast = marker.dataset.roast;
+    marker.style.left = roast + "%";
   });
 
   document.querySelectorAll(".add-to-cart").forEach((button, index) => {
@@ -71,75 +197,8 @@ function renderProducts(list) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("components/navbar.html")
-    .then((res) => res.text())
-    .then((data) => {
-      document.getElementById("navbar-section").innerHTML = data;
-      updateCartCount();
-    });
-
-  fetch("components/footer.html")
-    .then((res) => res.text())
-    .then((data) => {
-      document.getElementById("footer-section").innerHTML = data;
-
-      const form = document.getElementById("newsletterForm");
-      const emailInput = form.querySelector("input[type='email']");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const email = emailInput.value.trim();
-
-        if (!email) {
-          Swal.fire({
-            icon: "warning",
-            title: "Email Required",
-            text: "Please enter your email to join the newsletter.",
-            confirmButtonColor: "#8B4513",
-          });
-          return;
-        }
-
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email)) {
-          Swal.fire({
-            icon: "error",
-            title: "Invalid Email",
-            text: "Please enter a valid email address.",
-            confirmButtonColor: "#8B4513",
-          });
-          return;
-        }
-
-        Swal.fire({
-          icon: "success",
-          title: "Thank You!",
-          text: "Our squirrel driven automation machines are shipping you a welcome email that should hit your inbox today.",
-          confirmButtonColor: "#8B4513",
-        });
-
-        emailInput.value = "";
-      });
-    });
-
-  fetch("components/cart_sidebar.html")
-    .then((res) => res.text())
-    .then((data) => {
-      document.getElementById("cart-sidebar-section").innerHTML = data;
-      initializeCart();
-      loadCartItems();
-    });
-
-  fetch("json/products.json")
-    .then((res) => res.json())
-    .then((data) => {
-      allProducts = data;
-      renderProducts(allProducts);
-    })
-    .catch((err) => {
-      console.error("Failed to load products.json", err);
-    });
+  allProducts = getAllProducts();
+  renderProducts(allProducts);
 
   document.getElementById("searchInput").addEventListener("input", function () {
     const keyword = this.value.toLowerCase().trim();

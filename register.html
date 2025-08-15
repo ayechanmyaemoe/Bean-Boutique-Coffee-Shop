@@ -17,6 +17,8 @@
   <body>
     <div id="navbar-section"></div>
 
+    <div id="cart-sidebar-section"></div>
+
     <section class="hero-bg">
       <div class="container py-5 bg-coffee">
         <h1 class="fw-bold">Register for Our Coffee Events</h1>
@@ -25,7 +27,7 @@
     </section>
 
     <!-- Registration Form -->
-    <section class="py-5">
+    <div class="py-5">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6">
@@ -83,7 +85,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <div id="footer-section"></div>
 
@@ -97,18 +99,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-      fetch("components/navbar.html")
-        .then((res) => res.text())
-        .then((data) => {
-          document.getElementById("navbar-section").innerHTML = data;
-        });
-
-      fetch("components/footer.html")
-        .then((res) => res.text())
-        .then((data) => {
-          document.getElementById("footer-section").innerHTML = data;
-        });
-
       $(function () {
         $("#eventRegistration").on("submit", function (e) {
           e.preventDefault();
@@ -127,5 +117,8 @@
         });
       });
     </script>
+
+    <script src="cart.js"></script>
+    <script src="common.js"></script>
   </body>
 </html>
